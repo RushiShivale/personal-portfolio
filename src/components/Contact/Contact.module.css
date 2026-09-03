@@ -1,0 +1,205 @@
+/* ===== Contact Section Styles ===== */
+
+.contact {
+  background-color: var(--color-bg);
+}
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+/* ---------- Left: Info Column ---------- */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.contactTitle {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+}
+
+.contactTitleAccent {
+  color: var(--color-accent);
+}
+
+.contactDescription {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  max-width: 24rem;
+}
+
+/* Social links */
+.contactSocials {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base);
+}
+
+.socialLink:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- Right: Form Column ---------- */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  background-color: var(--color-white);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.formLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.formInput {
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  transition: border-color var(--transition-fast);
+}
+
+.formInput:focus {
+  border-color: var(--color-accent);
+  background-color: var(--color-white);
+}
+
+.formInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formSubmit {
+  align-self: flex-start;
+  padding: var(--space-3) var(--space-8);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.formSubmit:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.formSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------- Status Message ---------- */
+.formMessage {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.formMessageSuccess {
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+.formMessageError {
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .contactInfo {
+    text-align: center;
+    align-items: center;
+  }
+
+  .contactSocials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactTitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .contactForm {
+    padding: var(--space-6);
+  }
+
+  .contactContainer {
+    padding-inline: var(--space-4);
+  }
+}

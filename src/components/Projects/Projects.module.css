@@ -1,0 +1,158 @@
+/* ===== Projects Section Styles ===== */
+/* No images — clean text cards with accent border */
+
+.projects {
+  background-color: var(--color-bg);
+}
+
+.projectsContainer {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.projectsHeader {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.projectsTitle {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.projectsTitleAccent {
+  color: var(--color-accent);
+}
+
+.projectsSubtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  max-width: 28rem;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+/* ---------- Projects Grid ---------- */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+/* ---------- Project Card ---------- */
+.projectCard {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent-subtle);
+}
+
+/* Accent bar at top of card */
+.cardAccent {
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* Card body */
+.cardBody {
+  padding: var(--space-6) var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.projectCategory {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--color-accent-light);
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.projectName {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.projectDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Tech stack tags */
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.projectTag {
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+/* View link */
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  transition: gap var(--transition-fast);
+}
+
+.projectLink:hover {
+  gap: var(--space-3);
+}
+
+.projectLinkArrow {
+  font-size: var(--font-size-lg);
+  transition: transform var(--transition-fast);
+}
+
+.projectLink:hover .projectLinkArrow {
+  transform: translateX(2px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .projectsTitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .projectsContainer {
+    padding-inline: var(--space-4);
+  }
+}
